@@ -1,0 +1,25 @@
+# Logfile created on 2016-01-15 16:41:52 -0800 by logger.rb/47272
+::1 - - [15/Jan/2016:16:42:54 -0800] "GET /index.html HTTP/1.1" 200 2481 0.0007
+::1 - - [15/Jan/2016:16:42:54 -0800] "GET /assets/traceur-runtime.js HTTP/1.1" 200 102900 0.0044
+::1 - - [15/Jan/2016:16:42:54 -0800] "GET /assets/XING-BASE-0.0.1.css HTTP/1.1" 200 91113 0.0103
+::1 - - [15/Jan/2016:16:42:54 -0800] "GET /assets/XING-BASE-0.0.1.js HTTP/1.1" 200 159937 0.0110
+::1 - - [15/Jan/2016:16:42:54 -0800] "GET /assets/vendor.js HTTP/1.1" 200 1865770 0.4006
+::1 - - [15/Jan/2016:16:42:55 -0800] "GET /index.html?goto=/favicon.ico& HTTP/1.1" 200 2481 0.0004
+::1 - - [15/Jan/2016:16:56:58 -0800] "GET /index.html?goto=/home& HTTP/1.1" 200 2481 0.0014
+::1 - - [15/Jan/2016:16:56:58 -0800] "GET /assets/traceur-runtime.js HTTP/1.1" 304 - 0.0004
+::1 - - [15/Jan/2016:16:56:58 -0800] "GET /assets/vendor.js HTTP/1.1" 304 - 0.0003
+::1 - - [15/Jan/2016:16:56:58 -0800] "GET /assets/XING-BASE-0.0.1.css HTTP/1.1" 304 - 0.0003
+::1 - - [15/Jan/2016:16:56:58 -0800] "GET /assets/XING-BASE-0.0.1.js HTTP/1.1" 304 - 0.0003
+::1 - - [15/Jan/2016:16:56:59 -0800] "GET /index.html?goto=/favicon.ico& HTTP/1.1" 304 - 0.0002
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /index.html?goto=/home& HTTP/1.1" 200 2487 0.0003
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /assets/XingWebsite-0.0.1.css HTTP/1.1" 200 91115 0.0181
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /assets/XingWebsite-0.0.1.js HTTP/1.1" 200 159941 0.0114
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /assets/traceur-runtime.js HTTP/1.1" 200 102900 0.0107
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /assets/vendor.js HTTP/1.1" 200 1865770 0.0741
+::1 - - [15/Jan/2016:16:57:41 -0800] "GET /index.html?goto=/favicon.ico& HTTP/1.1" 200 2487 0.0006
+::1 - - [15/Jan/2016:16:57:44 -0800] "GET /index.html?goto=/home& HTTP/1.1" 304 - 0.0004
+::1 - - [15/Jan/2016:16:57:44 -0800] "GET /assets/XingWebsite-0.0.1.js HTTP/1.1" 304 - 0.0004
+::1 - - [15/Jan/2016:16:57:44 -0800] "GET /assets/vendor.js HTTP/1.1" 304 - 0.0003
+::1 - - [15/Jan/2016:16:57:44 -0800] "GET /assets/traceur-runtime.js HTTP/1.1" 304 - 0.0004
+::1 - - [15/Jan/2016:16:57:44 -0800] "GET /assets/XingWebsite-0.0.1.css HTTP/1.1" 304 - 0.0003
+::1 - - [15/Jan/2016:16:57:45 -0800] "GET /index.html?goto=/favicon.ico& HTTP/1.1" 304 - 0.0002
