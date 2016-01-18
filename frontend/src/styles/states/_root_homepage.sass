@@ -1,7 +1,67 @@
-
 #root_homepage
-  h1
-    border-bottom: 1px black solid
+  @media screen and (min-width: 0px)
+    #hero
+      width: 100%
+      height: 90vh
+      background-color: black
+      position: relative
+      #main-logo
+        width: 75%
+        margin: 0 auto
+        padding-top: 20vh
+        svg
+          width: 100%
+          height: 100%
+      h2
+        text-align: center
+        color: white
+        font-size: 1.5em
+        margin: 1em
+      .red-text
+        color: $red
+      #get-started
+        @include display-flex
+        @include flex-flow(row)
+        @include justify-content(center)
+        @include align-items(center)
+        background-color: white
+        border-radius: 5px
+        height: 3em
+        width: 10em
+        margin: 0 auto
+        p
+          text-transform: uppercase
+          font-size: 1em
+      #crosswalk
+        position: absolute
+        bottom: -4px
+        left: -5%
+        width: 110%
+        margin: 0 auto
+        svg
+          width: 100%
+          height: 100%
+
+  @media screen and (min-width: 875px)
+    #hero
+      #main-logo
+        width: 40%
+        margin: 0 auto
+        padding-top: 5vh
+        svg
+          width: 100%
+          height: 100%
+      h2
+        text-align: center
+        color: white
+        font-size: 2em
+        margin: 1em
+      #get-started
+        height: 4em
+        width: 15em
+        p
+          font-size: 1.5em
+
 
 // Sub-state styles can be put in the same file, if they aren't long enough
 // to deserve a separate file.

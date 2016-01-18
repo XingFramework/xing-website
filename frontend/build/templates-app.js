@@ -152,8 +152,19 @@ angular.module("auth/sessions/sessions.tpl.html", []).run(["$templateCache", fun
 
 angular.module("homepage/homepage-show.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("homepage/homepage-show.tpl.html",
-    "<h1>Xing Homepage</h1>\n" +
-    "<p>This will be the home page of whatever project is based on Xing. er</p>\n" +
+    "<div id=\"hero\">\n" +
+    "  <div id=\"main-logo\"\n" +
+    "       ng-include=\"'assets/xing_logo_full.svg'\">\n" +
+    "  </div>\n" +
+    "  <div id=\"crosswalk\"\n" +
+    "       ng-include=\"'assets/crosswalk.svg'\">\n" +
+    "  </div>\n" +
+    "  <h2>Rails API & <span class=\"red-text\">AngularJS</span></h2>\n" +
+    "  <h2>Simplified.</h2>\n" +
+    "  <div id=\"get-started\">\n" +
+    "    <p>Get Started</p>\n" +
+    "  </div>\n" +
+    "</div>\n" +
     "");
 }]);
 

@@ -3430,6 +3430,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("//https://fonts.googleapis.com/css?family=Roboto");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 8, ../../node_modules/xing-framework-sass/_base.sass */
 * {
   -moz-box-sizing: border-box;
@@ -3883,7 +3889,7 @@ body {
 
 /* line 1, ../../src/styles/partials/_typography.sass */
 body {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 /* line 4, ../../src/styles/partials/_typography.sass */
@@ -3912,9 +3918,99 @@ h4 {
   font-size: 100%;
 }
 
-/* line 3, ../../src/styles/states/_root_homepage.sass */
-#root_homepage h1 {
-  border-bottom: 1px black solid;
+@media screen and (min-width: 0px) {
+  /* line 3, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero {
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    position: relative;
+  }
+  /* line 8, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #main-logo {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 20vh;
+  }
+  /* line 12, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #main-logo svg {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 15, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    margin: 1em;
+  }
+  /* line 20, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero .red-text {
+    color: #e03237;
+  }
+  /* line 22, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #get-started {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    height: 3em;
+    width: 10em;
+    margin: 0 auto;
+  }
+  /* line 32, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #get-started p {
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  /* line 35, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #crosswalk {
+    position: absolute;
+    bottom: -4px;
+    left: -5%;
+    width: 110%;
+    margin: 0 auto;
+  }
+  /* line 41, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #crosswalk svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 875px) {
+  /* line 47, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #main-logo {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 5vh;
+  }
+  /* line 51, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #main-logo svg {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 54, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 1em;
+  }
+  /* line 59, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #get-started {
+    height: 4em;
+    width: 15em;
+  }
+  /* line 62, ../../src/styles/states/_root_homepage.sass */
+  #root_homepage #hero #get-started p {
+    font-size: 1.5em;
+  }
 }
 
 /* Default page when a critical error occurs. */
