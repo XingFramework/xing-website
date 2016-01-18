@@ -24,7 +24,8 @@
         @include flex-flow(row)
         @include justify-content(center)
         @include align-items(center)
-        background-color: white
+        background-color: $red
+        color: white
         border-radius: 5px
         height: 3em
         width: 10em
@@ -42,8 +43,9 @@
           width: 100%
           height: 100%
 
-  @media screen and (min-width: 875px)
+  @media screen and (min-width: 640px)
     #hero
+      min-height: 700px
       #main-logo
         width: 40%
         margin: 0 auto
