@@ -3873,22 +3873,12 @@ footer #sign-in-link {
 
 /* line 1, ../../src/styles/partials/_layout.sass */
 body {
-  background-color: #67c;
   font-family: sans-serif;
 }
 
 /* line 5, ../../src/styles/partials/_layout.sass */
 #wrap {
   background-color: white;
-  max-width: 1024px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  margin-top: 1em;
-}
-
-/* line 13, ../../src/styles/partials/_layout.sass */
-#root_inner > ui-view, #root_homepage > ui-view {
-  padding: 1em 2.12766%;
 }
 
 /* line 1, ../../src/styles/partials/_typography.sass */

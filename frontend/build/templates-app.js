@@ -153,31 +153,31 @@ angular.module("auth/sessions/sessions.tpl.html", []).run(["$templateCache", fun
 angular.module("homepage/homepage-show.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("homepage/homepage-show.tpl.html",
     "<h1>Xing Homepage</h1>\n" +
-    "<p>This will be the home page of whatever project is based on Xing.</p>\n" +
+    "<p>This will be the home page of whatever project is based on Xing. er</p>\n" +
     "");
 }]);
 
 angular.module("homepage/homepage.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("homepage/homepage.tpl.html",
-    "<xng-responsive-menu>\n" +
+    "<!-- <xng-responsive-menu>\n" +
     "  <a ui-sref='root.inner.homepage'>Homepage</a>\n" +
     "  <xng-session-links>\n" +
     "  </xng-session-links>\n" +
-    "</xng-responsive-menu>\n" +
+    "</xng-responsive-menu> -->\n" +
     "\n" +
     "<ui-view xng-state-attrs></ui-view>\n" +
     "\n" +
-    "<footer>\n" +
+    "<!-- <footer>\n" +
     "  <span id=\"copyright\">&copy; 2016 Your Organization Here</span>\n" +
     "  <a ui-sref='root.inner.sessions' id='sign-in-link'>Sign In</a>\n" +
     "  <a href='#' xng-unimplemented>Demo Unimplemented Feature</a>\n" +
-    "</footer>\n" +
+    "</footer> -->\n" +
     "");
 }]);
 
 angular.module("inner.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("inner.tpl.html",
-    "<xng-responsive-menu>\n" +
+    "<!-- <xng-responsive-menu>\n" +
     "  <xng-navbar id=\"main_nav\" menu=\"mainMenu\">\n" +
     "  </xng-navbar>\n" +
     "  <xng-session-links>\n" +
@@ -185,14 +185,14 @@ angular.module("inner.tpl.html", []).run(["$templateCache", function($templateCa
     "</xng-responsive-menu>\n" +
     "\n" +
     "<div id=\"toast_main\">\n" +
-    "</div>\n" +
+    "</div> -->\n" +
     "\n" +
     "<ui-view xng-state-attrs></ui-view>\n" +
     "\n" +
-    "<footer>\n" +
+    "<!-- <footer>\n" +
     "  <span id=\"copyright\">&copy; 2016 Your Organization Here</span>\n" +
     "  <a ui-sref='root.inner.sessions' id='sign-in-link'>Sign In</a>\n" +
-    "</footer>\n" +
+    "</footer> -->\n" +
     "");
 }]);
 
