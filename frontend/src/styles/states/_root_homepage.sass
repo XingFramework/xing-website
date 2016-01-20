@@ -1,4 +1,62 @@
 #root_homepage
+
+  .hljs
+    display: block
+    overflow-x: auto
+    padding: 1em
+    background: white
+    border: 8px black dashed
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-link
+    color: $red
+
+
+  .hljs,
+  .hljs-subst
+    color: $red
+
+
+  .hljs-string,
+  .hljs-title,
+  .hljs-name,
+  .hljs-type,
+  .hljs-attribute,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-built_in,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-tag,
+  .hljs-template-variable
+    color: black
+
+
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion,
+  .hljs-meta
+    color: #777
+
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-title,
+  .hljs-section,
+  .hljs-doctag,
+  .hljs-type,
+  .hljs-name,
+  .hljs-strong
+    font-weight: bold
+
+
+  .hljs-emphasis
+    font-style: italic
+
+
   @media screen and (min-width: 0px)
     #hero
       width: 100%
@@ -69,6 +127,14 @@
         div
           padding-left: 15px
           padding-right: 15px
+        overflow: hidden
+      #getting-started
+        padding-top: 30px
+        padding-left: 15px
+        padding-right: 15px
+        p
+          margin-bottom: 30px
+
   @media screen and (min-width: 640px)
     #hero
       min-height: 550px
@@ -102,7 +168,6 @@
         div
           float: left
           width: 33%
-
 
 // Sub-state styles can be put in the same file, if they aren't long enough
 // to deserve a separate file.
