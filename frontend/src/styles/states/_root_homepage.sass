@@ -6,6 +6,19 @@
       background-color: black
       position: relative
       overflow: hidden
+      #links
+        position: absolute
+        top: 0
+        right: 0
+        color: white
+        @include display-flex
+        @include flex-flow(row)
+        @include align-items(right)
+        a
+          margin: 1em 2em
+          text-decoration: none
+          &:visited, &:hover, &:active
+          color: inherit
       #main-logo
         width: 75%
         max-width: 75vh
