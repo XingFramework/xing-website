@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.4'
 
-set :repo_url, 'git@git.lrdesign.com:lrd/cms2.git'
+set :repo_url, 'git@github.com:XingFramework/xing-website.git'
 set :pty, true
 
 # Default value for :format is :pretty
