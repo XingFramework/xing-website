@@ -58,6 +58,7 @@ rake develop
     </p>
     <code-tabs>
       <code-pane name="book_serializer.rb" language="ruby">
+# backend/app/serializers/book_serializer.rb        
 class BookSerializer < Xing::Serializers::Base
   attributes :title, :description
 
@@ -71,6 +72,7 @@ class BookSerializer < Xing::Serializers::Base
 end
       </code-pane>
       <code-pane name="book_mapper.rb" language="ruby">
+# backend/app/mappers/book_mapper.rb    
 class BookMapper < Xing::Mappers::Base
   def record_class
     Book
@@ -87,6 +89,7 @@ class BookMapper < Xing::Mappers::Base
 end
       </code-pane>
       <code-pane name="book.js" language="javascript">
+// frontend/src/common/resources/book.js
 import RL from "relayer";
 
 class Book extends RL.Resource {
@@ -100,6 +103,7 @@ RL.Describe(Book, (desc) => {
 });
       </code-pane>
       <code-pane name="booksComponent.js" language="javascript">
+// frontend/src/app/books/bookComponent.js        
 import {Component, View} from "a1atscript"
 
 @Component({
