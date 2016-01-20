@@ -3,21 +3,21 @@
   .hljs
     display: block
     overflow-x: auto
-    padding: 1em
+    padding: 0em 1.5em 0em 1.5em
     background-color: #eee
     margin-bottom: 2em
+    line-height: 1.5em
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-literal,
   .hljs-section,
   .hljs-link
-    color: $red
+    color: black
 
 
   .hljs,
   .hljs-subst
-    color: $red
-
+    color: $light-red
 
   .hljs-string,
   .hljs-title,
@@ -31,14 +31,14 @@
   .hljs-variable,
   .hljs-template-tag,
   .hljs-template-variable
-    color: black
+    color: $red-grey
 
 
   .hljs-comment,
   .hljs-quote,
   .hljs-deletion,
   .hljs-meta
-    color: #777
+    color: black
 
 
   .hljs-keyword,
@@ -130,13 +130,29 @@
           padding-left: 15px
           padding-right: 15px
         overflow: hidden
-      #getting-started
-        padding-top: 30px
+      .content-block
+        padding-top: 15px
         padding-left: 15px
         padding-right: 15px
         p
           margin-bottom: 30px
-
+      #getting-started
+        padding-top: 30px !important
+        code
+          line-height: 2em !important
+      code-tabs
+        .code-box-nav
+          background: #aaa
+          padding-top: 5px
+        div.tab
+          display: inline-block
+          margin-left: 5px
+          border-top-left-radius: 5px
+          border-top-right-radius: 5px
+          padding: 10px
+          background: #ccc
+          &.selected
+            background: #eee
   @media screen and (min-width: 640px)
     #hero
       min-height: 550px

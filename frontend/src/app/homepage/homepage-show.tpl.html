@@ -32,7 +32,7 @@
       <p>Xing uses the best tools of today, plus advanced features not found anywhere else. Your entire API will be hypermedia-enabled by default, the first framework where your javascript client doesn't even need to know your API servers URL's ahead of time.</p>
     </div>
   </div>
-  <div id="getting-started">
+  <div id="getting-started" class="content-block">
     <a name="getting-started"></a>
      <h2>Getting Started</h2>
      <p>
@@ -40,14 +40,84 @@
      </p>
      <pre><code class="bash">
 gem install xing-framework
-
 xing new book-app
-
 cd book-app
-
 rake initialize
-
 rake develop
      </code></pre>
+  </div>
+  <div id="basics" class="content-block">
+    <a name="getting-started"></a>
+    <h2>The Basics</h2>
+    <p>
+     Xing apps start by defining hypermedia resources for your API server through "serializers" and "mappers", then building a user interface to interact with them in Angular.js.
+    </p>
+    <code-tabs>
+      <code-pane name="book_serializer.rb" language="ruby">
+class BookSerializer < Xing::Serializers::Base
+  attributes :title, :description
+
+  def links
+    {
+      :self => routes.book_path(object),
+      :author => routes.author_path(object.author),
+      :chapters => routes.book_chapters_path(object)
+    }
+  end
+end
+      </code-pane>
+      <code-pane name="book_mapper.rb" language="ruby">
+class BookMapper < Xing::Mappers::Base
+  def record_class
+    Book
+  end
+
+  def assign_values(data_hash)
+    @book_data = data_hash
+    super
+  end
+
+  def update_record
+    record.assign_attributes(@book_data)
+  end
+end
+      </code-pane>
+      <code-pane name="book.js" language="javascript">
+import RL from "relayer";
+
+class Book extends RL.Resource {
+}
+
+RL.Describe(Book, (desc) => {
+  desc.property("title", "");
+  desc.property("description", "");
+  desc.hasOne("author", "");
+  desc.hasList("chapters", "");
+});
+      </code-pane>
+      <code-pane name="booksComponent.js" language="javascript">
+import {Component, View} from "a1atscript"
+
+@Component({
+  selector: "book-list",
+  injectables: ["resources"]
+})
+@View({
+  template: `
+    &lt;ul ng-repeat="book in bookList.books"&gt;
+      &lt;li&gt;Title: {{book.title}}&lt;/li&gt;
+      &lt;li&gt;Description: {{book.description}}&lt;/li&gt;
+    &lt;/ul&gt;`
+})
+class BookList {
+  constructor(resources) {
+    this.books = [];
+    resources.books.load().then((books) => {
+      this.books = books;
+    })
+  }
+}
+      </code-pane>
+    </code-tabs>
   </div>
 </div>
