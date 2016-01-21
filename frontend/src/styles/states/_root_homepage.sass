@@ -96,22 +96,34 @@
         margin: 1em
       .red-text
         color: $red
-      & > a
-        text-decoration: none
-      #get-started
+
+      #action-buttons
         @include display-flex
-        @include flex-flow(row)
+        @include flex-flow(column)
         @include justify-content(center)
         @include align-items(center)
-        background-color: $red
-        color: white
-        border-radius: 5px
-        height: 3em
-        width: 10em
-        margin: 0 auto 80px auto
+        margin: 0 auto 70px auto
+        a
+          text-decoration: none
         p
           text-transform: uppercase
           font-size: 1em
+        div
+          @include display-flex
+          @include flex-flow(row)
+          @include justify-content(center)
+          @include align-items(center)
+          border-radius: 5px
+          height: 3em
+          width: 10em
+        #get-started
+          margin-bottom: 10px
+          background-color: $red
+          color: white
+        #read-the-book
+          margin-top: 10px
+          background-color: white
+          color: $red
       #crosswalk
         position: absolute
         bottom: -4px
@@ -175,12 +187,20 @@
         font-size: 1.8em
         margin-top: 0em
         margin-bottom: 1em
-      #get-started
-        height: 3.5em
-        width: 14.5em
+      #action-buttons
+        @include flex-flow(row)
         margin: 0 auto
+        div
+          height: 3.5em
+          width: 14.5em
         p
           font-size: 1.5em
+        #get-started
+          margin-bottom: 0px
+          margin-right: 10px
+        #read-the-book
+          margin-top: 0px
+          margin-left: 10px
     #content
       padding-left: 50px
       padding-right: 50px

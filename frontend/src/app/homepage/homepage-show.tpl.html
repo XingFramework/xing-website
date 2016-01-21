@@ -8,11 +8,19 @@
   </div>
   <h2>Rails API & <span class="red-text">AngularJS</span></h2>
   <h2>Simplified.</h2>
-  <a href="#getting-started">
-  <div id="get-started">
-    <p>Get Started</p>
+
+  <div id="action-buttons">
+    <a href="#getting-started">
+    <div id="get-started">
+      <p>Get Started</p>
+    </div>
+    </a>
+    <a href="https://xingframework.gitbooks.io/the-xing-framework/content/" target="_blank">
+    <div id="read-the-book">
+      <p>Read The Book</p>
+    </div>
+    </a>
   </div>
-  </a>
   <div id="crosswalk"
        ng-include="'assets/crosswalk.svg'">
   </div>
@@ -40,15 +48,18 @@
      </p>
      <p class='aside'>
      NOTE: These commands will install some Ruby gems and create a PostgreSQL DB on your system. For a more detailed walk-through,
-     please see <a href='https://xingframework.gitbooks.io/the-xing-framework/content/tutorial.html'>the full tutorial in the Xing Book</a>. 
+     please see <a href='https://xingframework.gitbooks.io/the-xing-framework/content/tutorial.html'>the full tutorial in the Xing Book</a>.
      </p>
-     <pre><code class="bash">
-gem install xing-framework
-xing new book-app
-cd book-app
-rake initialize
-rake develop
-     </code></pre>
+     <code-tabs>
+       <code-pane name="Install Xing" languages="bash">
+# Prerequisites: ruby, npm, redis, PostgreSQL, tmux
+$ gem install xing-framework
+$ xing new book-app
+$ cd book-app
+$ rake initialize
+$ rake develop
+        </code-pane>
+      </code-tabs>
   </div>
   <div id="basics" class="content-block">
     <a name="getting-started"></a>
@@ -58,7 +69,7 @@ rake develop
     </p>
     <code-tabs>
       <code-pane name="book_serializer.rb" language="ruby">
-# backend/app/serializers/book_serializer.rb        
+# backend/app/serializers/book_serializer.rb
 class BookSerializer < Xing::Serializers::Base
   attributes :title, :description
 
@@ -72,7 +83,7 @@ class BookSerializer < Xing::Serializers::Base
 end
       </code-pane>
       <code-pane name="book_mapper.rb" language="ruby">
-# backend/app/mappers/book_mapper.rb    
+# backend/app/mappers/book_mapper.rb
 class BookMapper < Xing::Mappers::Base
   def record_class
     Book
@@ -103,7 +114,7 @@ RL.Describe(Book, (desc) => {
 });
       </code-pane>
       <code-pane name="booksComponent.js" language="javascript">
-// frontend/src/app/books/bookComponent.js        
+// frontend/src/app/books/bookComponent.js
 import {Component, View} from "a1atscript"
 
 @Component({
