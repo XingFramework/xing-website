@@ -6,7 +6,7 @@
   <div id="main-logo"
        ng-include="'assets/xing_logo_full.svg'">
   </div>
-  <h2>Rails API & <span class="red-text">AngularJS</span></h2>
+  <h2>Rails API & <span class="red-text">Angular</span></h2>
   <h2>Simplified.</h2>
 
   <div id="action-buttons">
@@ -29,7 +29,7 @@
   <div id="selling-points">
     <div id="quick-start">
       <h2>Start Quickly</h2>
-      <p>Xing creates a Ruby On Rails API server and Angular JS application with a single command. A second command launches your development environment in an integrated console. Skip months of time lost to build systems, managing processes, and boilerplate code.</p>
+      <p>Xing creates a Ruby On Rails API server and an Angular application with a single command. A second command launches your development environment in an integrated console. Skip months of time lost to build systems, managing processes, and boilerplate code.</p>
     </div>
     <div id="simple">
       <h2>Keep It Simple</h2>
@@ -44,15 +44,11 @@
     <a name="getting-started"></a>
      <h2>Getting Started</h2>
      <p>
-     Install and run Xing in 5 easy commands:
-     </p>
-     <p class='aside'>
-     NOTE: These commands will install some Ruby gems and create a PostgreSQL DB on your system. For a more detailed walk-through,
-     please see <a href='https://xingframework.gitbooks.io/the-xing-framework/content/tutorial.html'>the full tutorial in the Xing Book</a>.
+       Start a new Xing app in minutes:
      </p>
      <code-tabs>
        <code-pane name="Install Xing" languages="bash">
-# Prerequisites: ruby, npm, redis, PostgreSQL, tmux
+# You'll need these installed first: ruby, npm, redis, PostgreSQL, tmux
 $ gem install xing-framework
 $ xing new book-app
 $ cd book-app
@@ -60,12 +56,25 @@ $ rake initialize
 $ rake develop
         </code-pane>
       </code-tabs>
+      <p>
+        These commands will download and install all the libraries required for
+        a full fledged web application, set up a database to develop against,
+        and create the basic files you'll need to get started. Finally, it'll
+        start up a development environment, complete with servers for both the
+        front end assets and the back-end API. You'll be ready to start adding
+        features right away.
+      </p>
+      <p>
+        Didn't work? Help is at hand! <a
+        href='https://github.com/XingFramework/xing-framework/issues'>Open an
+        issue</a> and we'll be happy to assist.
+      </p>
   </div>
   <div id="basics" class="content-block">
     <a name="getting-started"></a>
     <h2>The Basics</h2>
     <p>
-     Xing apps start by defining hypermedia resources for your API server through "serializers" and "mappers", then building a user interface to interact with them in Angular.js.
+     Xing apps start by defining hypermedia resources for your API server through "serializers" and "mappers", then building a user interface to interact with them in Angular.
     </p>
     <code-tabs>
       <code-pane name="book_serializer.rb" language="ruby">
@@ -138,5 +147,21 @@ class BookList {
 }
       </code-pane>
     </code-tabs>
+  </div>
+  <div id="is-xing-production-ready" class="content-block">
+    <h2>Can I use Xing in a Production Environment?</h2>
+    <p>Xing is still in beta, but the creators of Xing have used it in production applications for over a year. Xing will hit a 1.0 release around March of 2016, once the open source community gives feedback and critical bugs are addressed. After that, Xing will retain backwards compatibility for all releases in the 1.x series. Some additional features planned for Xing include:</p>
+    <ul>
+      <li>Improvements to onboarding and ease of use for new users</li>
+      <li>Code generation and scaffolding of common resource patterns</li>
+      <li>A full featured CMS module that plugs into Xing </li>
+      <li>Better integration testing capabilities</li>
+      <li>Ability to add a mobile app using Ionic/Cordova</li>
+    </ul>
+    <p>Xing will eventually support Angular 2.x, and the version that supports Angular 2 will be the first release in the Xing 2.x series. The Angular 2 compatible Xing aims to release when the final version of Angular 2 releases. However, Xing's 1.x series will retain support as long as Google supports Angular 1.x.</p>
+  </div>
+  <div id="creators" class="content-block">
+    <h2>Who are the creators of Xing?</h2>
+    <p><a href="https://lrdesign.com">Logical Reality Design</a>, a web development company, created Xing. Now it belongs to everyone!</p>
   </div>
 </div>
